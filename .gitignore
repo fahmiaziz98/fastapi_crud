@@ -1,5 +1,12 @@
 .env
-__pycache__
 
 .fastapi/
 .venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.pywz
+*.pyz
