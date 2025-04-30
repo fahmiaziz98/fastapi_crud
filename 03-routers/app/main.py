@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from src.book.router import book_router
+from app.api.routers.book_router import book_router
 
 app = FastAPI(
     title="Book API",

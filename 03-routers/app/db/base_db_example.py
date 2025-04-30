@@ -1,3 +1,5 @@
+"""Future Base model SQLAlchemy"""
+
 books = [
     {
         "id": 1,

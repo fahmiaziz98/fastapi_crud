@@ -1,6 +1,6 @@
 from fastapi import APIRouter, status, HTTPException
-from src.book.book_data import books
-from src.book.schema import Book, BookResponse, BookUpdate
+from app.db.base_db_example import books
+from app.api.schemas.book import Book, BookResponse, BookUpdate
 
 def get_all_books():
     return books
@@ -57,18 +57,15 @@ async def update_book(book_id: int, book_update_data: BookUpdate):
     )
 
 
-@book_router.delete("/book/{book_id}", tags=["books"], response_model=dict, status_code=status.HTTP_200_OK)
+@book_router.delete("/book/{book_id}", tags=["books"], status_code=status.HTTP_204_NO_CONTENT)
 async def delete_book_id(book_id: int):
     """
-    Delete book by ID.
+    Delete book by ID without returning a response body.
     """
     for book in books:
         if book["id"] == book_id:
             books.remove(book)
-            return {
-                "message": "Book deleted successfully", 
-                "deleted_book": book
-            }
+            return  
     
     raise HTTPException(
         status_code=status.HTTP_404_NOT_FOUND,

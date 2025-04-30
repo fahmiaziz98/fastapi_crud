@@ -27,4 +27,3 @@ class BookResponse(BaseModel):
     language: str
     class Config:
         orm_mode = True
-

@@ -1,0 +1,1 @@
+"Konfigurasi aplikasi (e.g., database, environment variables)"

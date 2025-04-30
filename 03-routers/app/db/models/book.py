@@ -1,0 +1,2 @@
+"Model untuk entitas buku"
+

@@ -11,7 +11,7 @@ This project demonstrates a CRUD API for managing books using FastAPI with route
 
 2. **Run the FastAPI Application**:
    ```bash
-   fastapi dev src/.
+   fastapi dev app/main.py
    ```
 
 ## Example Endpoint: Delete Book by ID
